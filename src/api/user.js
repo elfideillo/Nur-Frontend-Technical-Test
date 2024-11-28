@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const API_BASE_URL = 'http://localhost:4000/api/v1/users';
+const API_BASE_URL = 'https://nur-backend.elficos.com/api/v1/users';
 
 // Configura Axios con cabecera Authorization
 const api = axios.create({
