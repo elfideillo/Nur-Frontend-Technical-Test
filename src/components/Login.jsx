@@ -14,10 +14,10 @@ const Login = ({ onLoginSuccess }) => {
             const { token } = await loginUser({ email, password });
             setAuthToken(token); // Configura el token para futuras solicitudes
             onLoginSuccess(token); // Actualiza el estado de autenticación
-            alert('Login successful!');
+            alert('¡Inicio de sesión exitoso!');
             navigate('/dashboard'); // Redirige al Dashboard
         } catch (err) {
-            setError('Login failed: ' + (err.response?.data?.error || 'Unknown error'));
+            setError('Error al iniciar sesión: ' + (err.response?.data?.error || 'Error desconocido'));
         }
     };
 
@@ -26,34 +26,35 @@ const Login = ({ onLoginSuccess }) => {
     };
 
     return (
-        <div>
-            <button onClick={goToLandingPage}> Volver a Landing Page</button> {/* Botón para regresar */} <br/>
-            <h2>Iniciar Sesión</h2>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            <form onSubmit={handleLogin}>
-                <label>
+        <div className="login-container">
+            <button className="back-button" onClick={goToLandingPage}>Volver a Landing Page</button>
+            <h2 className="login-title">Iniciar Sesión</h2>
+            {error && <p className="error-message">{error}</p>}
+            <form className="login-form" onSubmit={handleLogin}>
+                <label className="form-label">
                     Email:
                     <input
                         type="email"
-                        placeholder="Email"
+                        className="form-input"
+                        placeholder="Introduce tu correo electrónico"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
                 </label>
-                <label>
-                    Password:
+                <label className="form-label">
+                    Contraseña:
                     <input
                         type="password"
-                        placeholder="Password"
+                        className="form-input"
+                        placeholder="Introduce tu contraseña"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
                     />
                 </label>
-                <button type="submit">Ingresar</button>
+                <button className="login-button" type="submit">Ingresar</button>
             </form>
-   
         </div>
     );
 };

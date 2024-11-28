@@ -9,10 +9,10 @@ const LandingPage = () => {
     };
 
     return (
-        <div>
-            <button onClick={goToLogin}>Iniciar Sesión</button> <br/>
-            <h1>Landingpage</h1>
-       
+        <div className="landing-page">
+            <h1 className="landing-title">Bienvenido a Nuestra Plataforma</h1>
+            <p className="landing-subtitle">Accede a tu cuenta o descubre nuestros servicios</p>
+            <button className="landing-button" onClick={goToLogin}>Iniciar Sesión</button>
         </div>
     );
 };
