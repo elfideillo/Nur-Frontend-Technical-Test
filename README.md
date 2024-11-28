@@ -1,56 +1,63 @@
-# React Frontend para Administración de Usuarios
+ # React Frontend para Administración de Usuarios
 
-Este proyecto es un frontend desarrollado en **React** con **Vite** que permite gestionar usuarios, incluyendo la creación, edición, eliminación y visualización. Incluye autenticación y protección de rutas.
+Este proyecto es un frontend desarrollado con **React** y **Vite**, diseñado para la gestión de usuarios. Ofrece funcionalidades completas como autenticación, protección de rutas, y operaciones CRUD (crear, leer, actualizar, eliminar).
 
-## Funcionalidades
+---
 
-- **Inicio de sesión**: Autenticación por token persistido en `localStorage`.
-- **Panel de control (Dashboard)**: Acceso rápido a las funcionalidades principales.
-- **Administración de usuarios**:
-  - Listado de usuarios.
+## ✨ Características Principales
+
+- **Inicio de sesión seguro**: Autenticación basada en tokens, almacenados de manera segura en `localStorage`.
+- **Dashboard intuitivo**: Acceso rápido a todas las funcionalidades principales.
+- **Gestión de usuarios**:
+  - Visualización de la lista de usuarios.
   - Creación de nuevos usuarios.
-  - Edición de usuarios existentes.
+  - Edición de información de usuarios existentes.
   - Eliminación de usuarios.
-- **Protección de rutas**: Solo usuarios autenticados pueden acceder a las secciones protegidas.
-- **Interfaz interactiva**: Uso de estilos responsivos y dinámicos para mejorar la experiencia del usuario.
+- **Protección de rutas**: Restricción de acceso a secciones específicas para usuarios autenticados.
+- **Interfaz amigable**: Diseño responsive y dinámico para una experiencia de usuario mejorada.
 
-## Tecnologías Utilizadas
+---
+
+## 🛠️ Tecnologías Utilizadas
 
 ### Dependencias Principales
-- [React](https://reactjs.org/) ^18.3.1
-- [React Router DOM](https://reactrouter.com/) ^7.0.1
-- [Axios](https://axios-http.com/) ^1.7.8
 
-### Dependencias de Desarrollo
-- [Vite](https://vitejs.dev/) ^6.0.1
-- ESLint con plugins para React y React Hooks.
+- **React**: ^18.3.1
+- **React Router DOM**: ^7.0.1
+- **Axios**: ^1.7.8
 
-## Instalación
+### Herramientas de Desarrollo
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/elfideillo/tu-repositorio.git
- 
+- **Vite**: ^6.0.1
+- **ESLint**: Configuración específica para React y Hooks.
+
+---
+
+## 🚀 Instalación y Configuración
+
+### 1. Clonar el Repositorio
+
+Clona el repositorio en tu máquina local:
+```bash
+git clone https://github.com/elfideillo/tu-repositorio.git
 ## 2. Instalar Node.js y npm
 
 Asegúrate de tener **Node.js** y **npm** instalados en tu sistema. Puedes verificarlo con los siguientes comandos:
-
-```bash
+bash
 node -v
 npm -v
 
 ## 3. Instalar las dependencias del proyecto
 
-Ejecuta el siguiente comando para instalar todas las dependencias definidas en `package.json`:
+Ejecuta el siguiente comando para instalar todas las dependencias definidas en package.json:
 
-```bash
+bash
 npm install
 
 ## 4. Configurar el proxy de desarrollo (opcional)
 
 Si tu proyecto requiere conectarse a un backend local, configura el proxy en el archivo `vite.config.js`. Asegúrate de que la dirección del backend sea correcta:
-
-```javascript
+javascript
 server: {
     proxy: {
         '/api': {
@@ -66,21 +73,20 @@ Si deseas verificar el código con **ESLint**, asegúrate de tenerlo configurado
 
 Ejecuta el siguiente comando para verificar la calidad del código:
 
-```bash
+bash
 npm run lint
 
 ## 6. Iniciar el servidor de desarrollo
 
 Ejecuta el siguiente comando para iniciar el servidor de desarrollo con **Vite**:
-
-```bash
+bash
 npm run dev
 
 ## 7. Generar el build para producción (opcional)
 
 Si necesitas un build optimizado para producción, ejecuta el siguiente comando:
 
-```bash
+bash
 npm run build
 
 
@@ -92,8 +98,7 @@ npm run build
 - **`npm run lint`**: Ejecuta ESLint para verificar la calidad del código.
 
 ## Estructura del Proyecto
-
-```plaintext
+plaintext
 ├── src/
 │   ├── components/       # Componentes reutilizables (LandingPage, Login, Dashboard, etc.)
 │   ├── api/              # Funciones para interactuar con la API
@@ -103,6 +108,3 @@ npm run build
 ├── public/               # Recursos públicos (favicon, imágenes, etc.)
 ├── vite.config.js        # Configuración de Vite
 └── package.json          # Configuración del proyecto
-
-
-
